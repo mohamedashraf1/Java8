@@ -2,16 +2,16 @@ package demo;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Supplier;
+//import java.util.function.Supplier;
 
 public class SupplierDemo {
     public static void main(String[] args) {
-        Supplier<String> supplier = () -> "hello bro";
+//        Supplier<String> supplier = () -> "hello bro";
 //        System.out.println(supplier.get());
 
         List<String> list  = Arrays.asList();
 //        System.out.println(list.stream().findAny().orElseGet(supplier));
-        System.out.println(list.stream().findAny().orElseGet(() -> "hello bro"));
+        System.out.println(list.stream().findAny().orElseGet(() -> "didn't find any elements in the list"));
 
     }
 }
