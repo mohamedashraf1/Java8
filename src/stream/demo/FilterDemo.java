@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class FilterDemo {
 
@@ -23,6 +24,8 @@ public class FilterDemo {
         }
         System.out.println("----------------------");
         list.stream().filter(t -> t.startsWith("m")).forEach(t -> System.out.println(t));
+        Stream s =  list.stream().filter(t -> t.startsWith("m"));
+        s.forEach(t -> System.out.println(t));
         System.out.println("----------------------");
         Map<Integer, String> map = new HashMap<>();
 
