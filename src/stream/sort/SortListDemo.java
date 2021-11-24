@@ -42,7 +42,10 @@ public class SortListDemo {
 //        System.out.println("-----------");
 // method 5
 //        employees.stream().sorted(Comparator.comparing(emp -> emp.getSalary())).forEach(t -> System.out.println(t));
+        System.out.println("Ascending: ");
         employees.stream().sorted(Comparator.comparing(Employee::getName)).forEach(t -> System.out.println(t));
+        System.out.println("***************\ndescending: ");
+        employees.stream().sorted(Comparator.comparing(Employee::getName).reversed()).forEach(t -> System.out.println(t));
 
 
     }
